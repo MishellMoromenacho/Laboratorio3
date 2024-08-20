@@ -1,0 +1,19 @@
+<div class="container text-center">
+  <h1 class="display-3 text-primary"><b>Mashup Educativo</b></h1>
+  <div class="card mx-auto my-4" style="width: 18rem;">
+    <div class="weather-container">
+      <h2>Clima</h2>
+      <div class="form-group">
+        <label for="province">Ingresa la Provincia: </label>
+        <input type="text" id="province" [(ngModel)]="province" placeholder="Enter province name">
+      </div>
+      <button (click)="fetchWeather()">Obtener</button>
+
+      <div *ngIf="weatherData">
+        <h3>Clima en {{ weatherData.name }}</h3>
+        <p>Temperatura: {{ weatherData.main.temp }} °C</p>
+        <p>Condición: {{ weatherData.weather[0].description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

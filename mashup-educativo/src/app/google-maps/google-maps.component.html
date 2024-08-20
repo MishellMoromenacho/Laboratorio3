@@ -1,0 +1,9 @@
+<div class="map-container">
+    <h2>Buscar Dirección en Google Maps</h2>
+    <div class="form-group">
+      <label for="address">Ingresa la dirección:</label>
+      <input type="text" id="address" [(ngModel)]="address" placeholder="Ingresa la dirección">
+    </div>
+    <button (click)="searchAddress()">Buscar</button>
+    <div id="map" class="map"></div>
+  </div>  
